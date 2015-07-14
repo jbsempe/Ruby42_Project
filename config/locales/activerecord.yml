@@ -1,0 +1,52 @@
+en:
+  activerecord:
+    attributes:
+      pack:
+        title: Title
+        description: Description
+        quantity: Quantity
+        format: Format
+        price: Price
+      order:
+        description: Description
+        quantity: Quantity
+        artist_name: Artiste Name
+        album_title: Album Title
+        label_name: Label Name
+        num_cat: Category Number
+        ingraving: Ingraving
+        vinyl_colors: Vinyl Color
+        label: Label
+        external_sleeve: External Sleeve
+        sleeve: Sleeve
+        packaging: Packaging
+        delivery_price: Delivery Price
+        total_price: Total Price
+fr:
+  activerecord:
+    attributes:
+      pack:
+        title: Titre
+        description: Description
+        quantity: Quantité
+        format: Format
+        price: Prix
+      order:
+        order: Commande
+        description: Description
+        format: Format
+        quantity: Quantité
+        artist_name: Nom de l'artiste
+        album_title: Titre de l'album
+        label_name: Label
+        num_cat: Numéro Catégorie
+        created_at: Date
+        ingraving: Gravure
+        vinyl_colors: Couleur du vinyl
+        label: Label
+        external_sleeve: Pochette exterieure
+        sleeve: Pochette
+        packaging: Emballage
+        weight: Poids
+        delivery_price: Frais de livraison
+        total_price: Prix total

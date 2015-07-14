@@ -1,0 +1,90 @@
+<% form_classes = @order.is_quote ? '' : 'expanded' %>
+<%= bootstrap_form_for @order, html: { class: "form #{form_classes}" } do |f| %>
+
+  <%= f.hidden_field :pack_id %>
+
+  <%= f.hidden_field :is_quote, data: { role: 'is-quote-input' } %>
+
+  <div class="order-form">
+    <h2 class="order-title">Details commande</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :quantity, quantity_attributes_for_select, {} ,{ class: 'form-control', data: { role: "price-related"}} %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :format, format_attributes_for_select, {} ,{ class: 'form-control', data: { role: "price-related"}} %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :ingraving, ingraving_attributes_for_select, {} ,{ class: 'form-control', data: { role: "price-related"}} %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :vinyl_colors, vinyl_colors_attributes_for_select, {}, { class: 'form-control', data: { role: "price-related"}} %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :external_sleeve, external_sleeve_attributes_for_select, {}, { class: 'form-control', data: { role: "price-related"}} %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :sleeve, sleeve_attributes_for_select, {}, { class: 'form-control', data: { role: "price-related"}} %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :packaging, packaging_attributes_for_select, {}, { class: 'form-control', data: { role: "price-related"}} %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :weight, weight_attributes_for_select, {}, { class: 'form-control', data: { role: "price-related"}} %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <%= f.select :label, label_attributes_for_select, {}, { class: 'form-control', data: { role: "price-related"}} %>
+      </div>
+    </div>
+  </div>
+
+  <div id="client-information">
+    <div class="order-form">
+      <h2 class="order-title">Informations Artiste</h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <%= f.text_field :artist_name, class: "form-control" %>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <%= f.text_field :album_title, class: "form-control" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <%= f.text_field :label_name, class: "form-control" %>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <%= f.number_field :num_cat, class: "form-control" %>
+        </div>
+      </div>
+      <h2 class="order-title">Informations Client</h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <%= f.fields_for :client do |c| %>
+            <%= c.text_field :email, class: "form-control" %>
+          <% end %>
+        </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="order-form">
+    <div class="row">
+      <div class="col-xs-12 text-center order-btn">
+        <%= f.submit t('public.orders.pdf'), class: "btn btn-success submit-pdf" %>
+        <button href="#" class="btn btn-success new-order" data-role="new-order"><%= t('public.orders.ask') %></button>
+
+        <%= f.submit t('public.orders.new'), class: "btn btn-success submit-order" %>
+        <button href="#" class="btn btn-danger cancel-order" data-role="cancel-order"><%= t('public.orders.cancel') %></button>
+      </div>
+    </div>
+  </div>
+<% end %>

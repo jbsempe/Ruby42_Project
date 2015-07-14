@@ -1,0 +1,23 @@
+fr:
+  admin:
+    orders:
+      messages:
+        edit: Commande modifiée avec succés
+        new: La commande a bien été prise en compte
+        destroy: Commande supprimée avec succés
+      action:
+        edit: Modifier
+        new: Ajouter une Commande
+        destroy: Supprimer
+        show: Détails
+        back: Retour
+        confirm: Confirmer Supression ?
+      index:
+        title: Liste des Commandes
+      new:
+        title: Nouvelle Commande
+      edit:
+        title: Modifier Commande
+      show:
+        title: Détails de la Commande
+

@@ -1,0 +1,42 @@
+fr:
+  public:
+    orders:
+      new: Créer Commande
+      pdf: Générer devis PDF
+      ask: Demande de Commande
+      cancel: Annuler
+      quantities:
+        three_hundred: "300"
+        five_hundred: "500"
+        thousand: "1000"
+      formats:
+        small: "17cm (45 tr/min)"
+        large: "30cm (33 tr/min)"
+      ingravings:
+        lacques: Gravure sur lacques + galvano
+        seule: Galvano seule (lacques fournies)
+      vinyls_colors:
+        black: Noir
+        color: Couleur
+      labels:
+        white: Blanc
+        print: Imprimée
+      external_sleeves:
+        not_poly: Noire ou blanche 2 trous
+        poly: Noire ou blanche 2 trous (polylignée)
+      sleeves:
+        without: Sans
+        not_cardboard: CMYK tranche 3mm carton 300gr
+        cardboard: CMYK tranche 3mm carton 300gr envers de carton
+      packagings:
+        without_p: Sans
+        cellophanage: Cellophanage
+        pvc_sleeve: Surpochette PVC
+      weights:
+        standard: Standard (140gsm)
+        heavy: Lourd (180gsm)
+      statuses:
+        discussion: En discution
+        delivery_process: En cours de livraison
+        deliver: Livré
+      price_tooltip: "Ce devis n'inclut pas les frais de livraisons, ni les taxes"

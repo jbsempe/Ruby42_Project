@@ -1,0 +1,8 @@
+en:
+  public:
+    orders:
+      new: Create Order
+      pdf: PDF Quote
+      ask: New Order
+      cancel: Cancel
+

@@ -1,0 +1,37 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h2><%= t('admin.packs.index.title') %></h2></div>
+  <div class="add-pack">
+    <%= link_to "" , new_admin_pack_path, class:"fa fa-plus-square" %>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th><%= Pack.human_attribute_name(:title) %></th>
+        <th><%= Pack.human_attribute_name(:description) %></th>
+        <th><%= Pack.human_attribute_name(:format) %></th>
+        <th><%= Pack.human_attribute_name(:price) %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @packs.each do |pack| %>
+        <tr>
+          <td><%= pack.title %></td>
+          <td><%= pack.description %></td>
+          <td><%= pack.format %></td>
+          <td><%= pack.price %></td>
+          <td><%= image_tag pack.image.url(:thumb) %></td>
+          <td><%= link_to t('admin.packs.action.edit'), edit_admin_pack_path(pack) %></td>
+          <td><%= link_to t('admin.packs.action.destroy'), admin_pack_path(pack.id), method: :delete, data: { confirm: t('admin.packs.action.confirm') } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="text-center">
+    <nav><ul class="pagination pagination-sm"><%= paginate @packs %></ul></nav>
+  </div>
+</div>
+<br>
+
+

@@ -1,0 +1,33 @@
+<%= form_for(@admin_user, url: admin_user_path) do |f| %>
+  <div class="user-form">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= f.label :email %><br>
+          <%= f.text_field :email, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= f.label :password %><br>
+          <%= f.password_field :password, class: "form-control"%>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= f.label :password_confirmation %><br>
+          <%= f.password_field :password_confirmation, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+    <div class="btn-edit">
+      <div class="actions">
+        <%= f.submit "Modifier", class: "btn btn-success" %>
+      </div>
+    </div>
+  </div>
+<% end %>

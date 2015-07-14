@@ -1,0 +1,6 @@
+fr:
+  admin:
+    layouts:
+      signed_out: Se déconnecter
+      edit_account: Editer mon compte
+

@@ -1,0 +1,87 @@
+body.orders.new{
+  form{
+    #client-information, .cancel-order, .submit-order{
+      display: none;
+    }
+  }
+  form.expanded{
+    #client-information {
+      display: inherit;
+    }
+    .submit-order, .cancel-order{
+      display: inline-block;
+    }
+    .submit-pdf, .new-order{
+      display: none;
+    }
+  }
+  .col-xs-6, .col-xs-12{
+    margin-top: 15px;
+  }
+  .order-form {
+    width: 60%;
+    margin: 0 auto;
+    margin-left: 6%;
+  }
+  .order-title {
+    margin-top: 70px;
+    margin-bottom: -15px;
+    text-align: center;
+    color: #929292;
+  }
+  .pack {
+    margin-top: 150px;
+  }
+  .pack-infos {
+    max-width: 90%;
+  }
+  .pack-img {
+  }
+  .pack-title {
+    font-size: 3em;
+    display: inline;
+  }
+  .pack-description {
+    margin-top: 20px;
+    text-align: justify;
+  }
+  .pack-price {
+    margin-top: 8px;
+    float: right;
+    margin-left: 20%;
+    font-size: 80%;
+    color: $gold;
+    position: fixed;
+  }
+  .pack-description:before {
+    content: '';
+    display: block;
+    width: 20%;
+    min-height: 3px;
+    height: 3px;
+    margin: 10px 0;
+    background: $gold;
+    margin-top: -10px;
+  }
+  .order-btn {
+    float: left;
+  }
+  .tooltip {
+    width: 300px;
+  }
+}
+body.orders.edit {
+  .order-form {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .order-title {
+    margin-top: 70px;
+    margin-bottom: -15px;
+    text-align: center;
+    color: #929292;
+  }
+  .order-btn {
+    float: left;
+  }
+}

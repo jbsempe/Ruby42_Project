@@ -1,0 +1,66 @@
+<%= bootstrap_form_for([:admin, @pack], html: { class: 'form' }) do |f| %>
+  <div class="pack-form">
+    <div class="form-group">
+      <ul class="nav nav-tabs">
+        <% I18n.available_locales.each do |locale| %>
+          <li class="<%= 'active' if locale == :fr %>"><a data-toggle="tab" href="#<%= locale %>"><%= t("#{locale}_name") %></a></li>
+        <% end %>
+      </ul>
+      <div class="tab-content">
+        <% I18n.available_locales.each do |locale| %>
+          <div id="<%= locale %>" class="tab-pane fade <%= 'in active' if locale == :fr %>">
+            <%= f.text_field "title_#{locale}" , class: "form-control" %>
+            <%= f.text_area "description_#{locale}", class: "form-control" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :quantity, quantity_attributes_for_select, {} ,{ class: 'form-control', data: { role: "quantity"}} %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :format, format_attributes_for_select, {} ,{ class: 'form-control', data: { role: "format"}} %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :ingraving, options_for_select(ingraving_attributes_for_select, selected: @pack.ingraving), {} ,{ class: 'form-control' }%>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :vinyl_colors, options_for_select(vinyl_colors_attributes_for_select, selected: @pack.vinyl_colors), {} ,{ class: 'form-control' }%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :external_sleeve, options_for_select(external_sleeve_attributes_for_select, selected: @pack.external_sleeve), {} ,{ class: 'form-control' }%>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :sleeve, options_for_select(sleeve_attributes_for_select, selected: @pack.sleeve), {} ,{ class: 'form-control' }%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :packaging, options_for_select(packaging_attributes_for_select, selected: @pack.packaging), {} ,{ class: 'form-control' }%>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= f.select :weight, options_for_select(weight_attributes_for_select, selected: @pack.weight), {} ,{ class: 'form-control' }%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <%= f.select :label, options_for_select(label_attributes_for_select, selected: @pack.label), {} ,{ class: 'form-control' }%>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <%= f.file_field :image, id: "upload-image", data: { role: 'upload-image' }%>
+        <%= image_tag @pack.image.url(:medium), id: "upload-preview", data: { role: 'upload-preview' }%>
+      </div>
+    </div>
+  </div>
+  <div class="actions">
+    <%= f.submit t('admin.packs.action.new'), class: "btn btn-success" %>
+  </div>
+<% end %>

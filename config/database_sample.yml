@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: mgv_development
+  host: localhost
+  username: postgres
+  password:
+
+
+test:
+  <<: *default
+  database: mgv_test
+
+production:
+  <<: *default
+  database: mgv_production
+  username: mgv
+  password: <%= ENV['MGV_DATABASE_PASSWORD'] %>
+

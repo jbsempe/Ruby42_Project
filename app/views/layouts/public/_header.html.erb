@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default navbar-fixed-top mgv-navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-brand">
+      <p>LOGO</p>
+    </div>
+    <div class="pull-right mgv-language-select">
+      <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+      /
+      <%= link_to_unless I18n.locale == :fr, "Francais", locale: :fr %>
+    </div>
+  </div>
+</nav>

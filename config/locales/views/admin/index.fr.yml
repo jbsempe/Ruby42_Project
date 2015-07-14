@@ -1,0 +1,7 @@
+fr:
+  admin:
+    index:
+      please_log_in: Veuillez vous connecter
+      connexion: Connexion
+      email: Email
+      password: Mot de passe

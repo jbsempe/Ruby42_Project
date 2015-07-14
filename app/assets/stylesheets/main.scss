@@ -1,0 +1,77 @@
+.mgv-navbar-fixed-top{
+  z-index: 10;
+  background: rgba(39,40,45,0.98);
+  min-height: 15vh;
+  line-height: 15vh;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  border: none;
+}
+.navbar-brand{
+  height: 15vh;
+  padding: 15px 30px;
+}
+.mgv-logo{
+  width: 15vh;
+  padding: 1vh 0;
+}
+.mgv-language-select a{
+  padding: 3px 2px;
+  margin: 0 10px;
+}
+.mgv-store-hero{
+  margin: 30px 0 40px 0;
+}
+.mgv-thumbnail{
+  background: transparent;
+  border: none;
+  height: 435px;
+  min-height: 435px;
+  max-height: 435px;
+
+  .mgv-thumbnail > img{
+    transition: .2s ease-in-out;
+  }
+  &:hover {
+    > img{
+      opacity: 0.6;
+    }
+    .caption > h3{
+      margin-left: 10px;
+    }
+  }
+  .caption::before{
+    content: '';
+    display: block;
+    width: 60px;
+    min-height: 3px;
+    height: 3px;
+    margin: 10px 0;
+    background: #fff;
+  }
+  .caption{
+    color: #929292;
+  }
+  .caption > h3{
+    color: #ffffff;
+    font-weight: normal;
+    margin: 3px 0;
+  }
+  .caption > h3{
+    transition: .2s ease-in-out;
+  }
+}
+
+.pack-desc{
+  text-align: justify;
+}
+.pack-price {
+  float: right;
+  color: $gold;
+  font-size: 0.7em;
+  margin-top: 5px;
+}
+.add-pack {
+  float: right;
+  margin-top: -50px;
+  font-size: 2em;
+}

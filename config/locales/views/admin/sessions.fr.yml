@@ -1,0 +1,6 @@
+fr:
+  admin:
+    sessions:
+      sign_out_confirmation: Vous êtes déconnecté
+      sign_in_error: Le mot de passe ou l'utilisateur est introuvable
+

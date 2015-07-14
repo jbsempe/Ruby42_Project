@@ -1,0 +1,23 @@
+fr:
+  admin:
+    packs:
+      messages:
+        edit: Pack modifié avec succés
+        new: Pack ajouté avec succés
+        destroy: Pack supprimé avec succés
+      action:
+        edit: Modifier
+        new: Ajouter un Pack
+        destroy: Supprimer
+        show: Détails
+        back: Retour
+        confirm: Confirmer Supression ?
+      index:
+        title: Liste des Packs proposés
+      new:
+        title: Ajouter un Pack
+      edit:
+        title: Modifier Pack
+      show:
+        title: Détails du Pack
+

@@ -1,0 +1,30 @@
+quantity:
+  three_hundred: 300
+  five_hundred: 500
+  thousand: 1000
+format:
+  small: 100
+  large: 250
+ingraving:
+  seule: 20
+  lacques: 120
+vinyl_colors:
+  black: 30
+  color: 50
+label:
+  white: 30
+  print: 56
+external_sleeve:
+  not_poly: 9
+  poly: 77
+sleeve:
+  without: 32
+  not_cardboard: 67
+  cardboard: 3
+packaging:
+  without_p: 21
+  cellophanage: 27
+  pvc_sleeve: 54
+weight:
+  standard: 88
+  heavy: 22

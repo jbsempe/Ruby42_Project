@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="mgv-hero-slider">
+      <% slider_images.each do |img| %>
+        <div class="mgv-hero-slide" style="background-image: url(<%= img %>);">
+          <h2>Mental Groove Vinyl</h2>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <h2 class="text-center mgv-store-hero">Record Store</h2>
+  </div>
+    <div class="row">
+      <% @packs.each do |pack| %>
+        <div class="col-sm-6 col-md-3">
+          <div class="thumbnail mgv-thumbnail">
+            <%= image_tag pack.image.url(:medium) %>
+            <div class="caption">
+              <h3><%= link_to pack.title, new_order_path(pack_id: pack.id) %>
+                <div class="pack-price">
+                  <%= pack.price %> CHF
+                </div>
+              </h3>
+              <div class="pack-desc">
+                <%= pack.description %>
+              </div>
+              <p>
+                <%= Pack.human_attribute_name(:format) %> :
+                <%= pack.format %>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+one_en:
+  title: pack1
+  description: description1
+  locale: en
+  pack_id: 1
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>

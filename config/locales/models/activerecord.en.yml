@@ -1,0 +1,13 @@
+I18n.locale = en:
+en:
+  activerecord:
+    models:
+      pack:
+        one: Pack
+        other: Packs
+    attributes:
+      pack:
+        title: Title
+        description: Description
+        quantity: Quantity
+        format: Format
